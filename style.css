@@ -178,61 +178,152 @@ section{
    MEMBERS
 ====================== */
 
-.members{
+/* ======================
+   PREMIUM MEMBERS CAROUSEL
+====================== */
+
+.members-section{
+    padding:80px 0;
+    background:#111;
+}
+
+.members-section .section-title h2{
+    color:#fff;
+}
+
+.members-section .section-title p{
+    color:#bbb;
+}
+
+.carousel-container{
+    position:relative;
+    width:95%;
+    max-width:1400px;
+    margin:auto;
     overflow:hidden;
 }
 
 .carousel{
     display:flex;
-    gap:20px;
-    overflow-x:auto;
-    scroll-behavior:smooth;
-    padding-bottom:10px;
-}
-
-.carousel::-webkit-scrollbar{
-    height:8px;
-}
-
-.carousel::-webkit-scrollbar-thumb{
-    background:var(--gold);
-    border-radius:20px;
+    gap:25px;
+    transition:transform .6s ease;
 }
 
 .member-card{
+
     min-width:280px;
-    background:white;
+    background:#1a1a1a;
+    border:2px solid #c6922d;
     border-radius:18px;
-    box-shadow:var(--shadow);
     overflow:hidden;
-    transition:.3s;
+    box-shadow:0 15px 35px rgba(0,0,0,.4);
+    transition:.35s;
+
 }
 
 .member-card:hover{
-    transform:scale(1.03);
+
+    transform:translateY(-10px);
+    box-shadow:0 20px 45px rgba(198,146,45,.35);
+
 }
 
 .member-card img{
+
     width:100%;
+    height:380px;
+    object-fit:cover;
     display:block;
+
 }
 
 .member-info{
+
     padding:18px;
     text-align:center;
+
 }
 
 .member-info h3{
+
+    color:#fff;
     margin-bottom:8px;
+    font-size:22px;
+
 }
 
 .member-id{
+
     display:inline-block;
-    margin-top:10px;
+    background:#c6922d;
+    color:#fff;
     padding:8px 18px;
-    background:var(--gold);
-    color:white;
-    border-radius:30px;
+    border-radius:40px;
+    font-weight:bold;
+
+}
+
+/* Buttons */
+
+.carousel-btn{
+
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+width:50px;
+height:50px;
+border:none;
+border-radius:50%;
+background:#c6922d;
+color:#fff;
+font-size:24px;
+cursor:pointer;
+z-index:100;
+
+}
+
+.carousel-btn:hover{
+
+background:#a97b21;
+
+}
+
+.prev{
+
+left:10px;
+
+}
+
+.next{
+
+right:10px;
+
+}
+
+@media(max-width:992px){
+
+.member-card{
+
+min-width:45%;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.member-card{
+
+min-width:100%;
+
+}
+
+.carousel-btn{
+
+display:none;
+
+}
+
 }
 
 /* ======================
