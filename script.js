@@ -174,3 +174,18 @@ document.addEventListener("keydown",(e)=>{
     }
 
 });
+/* ==========================
+   TRANSPARENT NAVBAR
+========================== */
+
+const nav = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 80) {
+        nav.classList.add("scrolled");
+    } else {
+        nav.classList.remove("scrolled");
+    }
+
+});
