@@ -1,77 +1,76 @@
-// =========================================
+// ========================================
 // PRO PULOT CO.
-// Premium Website Script
-// =========================================
+// Premium Members Carousel
+// ========================================
 
-// Smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function(e){
-        e.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
 
-        const target = document.querySelector(this.getAttribute("href"));
+    const carousel = document.querySelector(".carousel");
+    const prev = document.querySelector(".prev");
+    const next = document.querySelector(".next");
 
-        if(target){
-            target.scrollIntoView({
-                behavior:"smooth"
-            });
+    if (!carousel) return;
+
+    const card = carousel.querySelector(".member-card");
+    if (!card) return;
+
+    const gap = 25;
+    const cardWidth = card.offsetWidth + gap;
+
+    let autoSlide;
+
+    function nextSlide() {
+
+        carousel.scrollBy({
+            left: cardWidth,
+            behavior: "smooth"
+        });
+
+        if (
+            carousel.scrollLeft + carousel.clientWidth >=
+            carousel.scrollWidth - 5
+        ) {
+
+            setTimeout(() => {
+
+                carousel.scrollTo({
+                    left: 0,
+                    behavior: "smooth"
+                });
+
+            }, 500);
+
         }
-    });
-});
 
-// Reveal animation
-const reveals = document.querySelectorAll("section");
+    }
 
-function revealOnScroll(){
+    function prevSlide() {
 
-    reveals.forEach(section=>{
+        carousel.scrollBy({
+            left: -cardWidth,
+            behavior: "smooth"
+        });
 
-        const windowHeight = window.innerHeight;
-        const revealTop = section.getBoundingClientRect().top;
+    }
 
-        if(revealTop < windowHeight - 100){
+    next.addEventListener("click", nextSlide);
+    prev.addEventListener("click", prevSlide);
 
-            section.style.opacity="1";
-            section.style.transform="translateY(0)";
-        }
+    function startCarousel() {
 
-    });
+        autoSlide = setInterval(nextSlide, 4000);
 
-}
+    }
 
-reveals.forEach(section=>{
+    function stopCarousel() {
 
-    section.style.opacity="0";
-    section.style.transform="translateY(60px)";
-    section.style.transition="1s";
+        clearInterval(autoSlide);
 
-});
+    }
 
-window.addEventListener("scroll",revealOnScroll);
+    carousel.addEventListener("mouseenter", stopCarousel);
+    carousel.addEventListener("mouseleave", startCarousel);
 
-revealOnScroll();
-
-// Active navigation
-
-const links=document.querySelectorAll("nav a");
-
-links.forEach(link=>{
-
-link.addEventListener("click",()=>{
-
-links.forEach(l=>l.classList.remove("active"));
-
-link.classList.add("active");
+    startCarousel();
 
 });
-
-});
-
-// Footer Year
-
-const year=document.getElementById("year");
-
-if(year){
-
-year.textContent=new Date().getFullYear();
-
-}
