@@ -206,7 +206,14 @@ section{
 .carousel{
     display:flex;
     gap:25px;
-    transition:transform .6s ease;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+}
+
+.carousel::-webkit-scrollbar{
+    display:none;
 }
 
 .member-card{
