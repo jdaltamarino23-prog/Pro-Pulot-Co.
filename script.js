@@ -252,7 +252,7 @@ const leaders = {
 
     aziel:{
         name:"Aziel JD Altamarino",
-        position:"Systems & Software Engineer",
+        position:"Software & Social Media Engineer",
         image:"images/officers/aziel.jpg",
         bio:"Develops and maintains the Pro Pulot Co. website, digital platforms, and technology solutions."
     },
