@@ -416,15 +416,13 @@ const specialMembers = {
     member1:{
         name:"Pao Nemil",
         title:"Featured Special Member",
-        image:"images/special/member1.jpg",
+        image:"images/feature/member1.jpg",
 
         tenure:"Special Guest",
 
         bio:"A valued friend of Pro Pulot Co. who joined the community during a memorable club event and continues to share the spirit of sportsmanship and fellowship.",
 
         responsibilities:[
-            "Participated in community activities",
-            "Shared memorable moments with the club",
             "Promoted camaraderie and friendship",
             "Supported Pro Pulot Co. events"
             ]
@@ -433,17 +431,15 @@ const specialMembers = {
     member2:{
         name:"Sharon Ano-os",
         title:"Featured Special Member",
-        image:"images/special/member2.jpg",
+        image:"images/feature/member2.jpg",
 
         tenure:"Special Guest",
 
         bio:"A valued guest of Pro Pulot Co. who joined the community during a special club event, contributing to an atmosphere of friendship, sportsmanship, and shared enthusiasm for pickleball.",
 
         responsibilities:[
-        "Participated in community activities",
         "Built meaningful connections with members",
         "Promoted sportsmanship and camaraderie",
-        "Shared memorable experiences with the club"
             ]
         
     },
@@ -451,17 +447,15 @@ const specialMembers = {
     member3:{
         name:"Randy Cipriano",
         title:"Featured Special Member",
-        image:"images/special/member3.jpg",
+        image:"images/feature/member3.jpg",
 
         tenure:"Special Guest",
 
         bio:"Joined Pro Pulot Co. during a memorable gathering, becoming part of a special occasion that strengthened friendships and celebrated the spirit of the pickleball community.",
  
         responsibilities:[
-        "Participated in club activities",
         "Supported community engagement",
         "Encouraged positive fellowship",
-        "Created lasting memories with members"
             ]
         
     },
@@ -469,7 +463,7 @@ const specialMembers = {
     member4:{
         name:"Roswel Dayanan",
         title:"Featured Special Member",
-        image:"images/special/member4.jpg",
+        image:"images/feature/member4.jpg",
 
         tenure:"Special Guest",
 
