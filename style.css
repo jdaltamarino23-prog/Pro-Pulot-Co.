@@ -785,3 +785,104 @@ nav ul{
 .leader-btn:hover{
     background:#a67d1d;
 }
+/* ==========================
+   LEADERSHIP PROFILE MODAL
+========================== */
+
+.leader-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.85);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    padding:20px;
+}
+
+.leader-modal.active{
+    display:flex;
+}
+
+.leader-modal-content{
+    width:100%;
+    max-width:650px;
+    background:#fff;
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+    position:relative;
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+    animation:leaderPopup .35s ease;
+}
+
+@keyframes leaderPopup{
+    from{
+        opacity:0;
+        transform:translateY(30px) scale(.95);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+.leader-close{
+    position:absolute;
+    top:18px;
+    right:25px;
+    font-size:36px;
+    cursor:pointer;
+    color:#999;
+}
+
+.leader-close:hover{
+    color:#c6922d;
+}
+
+#leader-photo{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid #c6922d;
+    margin-bottom:25px;
+}
+
+#leader-name{
+    font-size:34px;
+    color:#222;
+    margin-bottom:8px;
+}
+
+#leader-position{
+    color:#c6922d;
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+#leader-bio{
+    color:#555;
+    line-height:1.8;
+    font-size:17px;
+}
+
+.leader-navigation{
+    margin-top:35px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.leader-navigation button{
+    background:#c6922d;
+    color:#fff;
+    border:none;
+    padding:12px 24px;
+    border-radius:40px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.leader-navigation button:hover{
+    background:#a67d1d;
+}
