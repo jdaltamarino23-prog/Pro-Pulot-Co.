@@ -427,7 +427,7 @@ const specialMembers = {
             "Shared memorable moments with the club",
             "Promoted camaraderie and friendship",
             "Supported Pro Pulot Co. events"
-        ]
+            ]
     },
 
     member2:{
@@ -444,7 +444,7 @@ const specialMembers = {
         "Built meaningful connections with members",
         "Promoted sportsmanship and camaraderie",
         "Shared memorable experiences with the club"
-    ]
+            ]
         
     },
 
@@ -462,7 +462,7 @@ const specialMembers = {
         "Supported community engagement",
         "Encouraged positive fellowship",
         "Created lasting memories with members"
-    ]
+            ]
         
     },
 
@@ -475,11 +475,13 @@ const specialMembers = {
 
         bio:"Recognized as a featured special member for sharing meaningful moments with Pro Pulot Co. through fellowship, community events, and a genuine passion for bringing people together through sport.",
 
-        responsibilities:{
+        responsibilities:[
         "Joined community events",
         "Fostered friendship and unity",
         "Shared positive experiences with members",
         "Contributed to memorable club moments"
+    ]
+        
     }
 
 };
@@ -558,6 +560,22 @@ document.querySelectorAll(".leader-btn").forEach(button=>{
         e.preventDefault();
 
         loadLeader(this.dataset.leader);
+
+        leaderModal.classList.add("active");
+
+    });
+
+});
+
+document.querySelectorAll(".featured-btn").forEach(button=>{
+
+    button.addEventListener("click",function(e){
+
+        e.preventDefault();
+
+        const id = this.dataset.special;
+
+        loadSpecialMember(id);
 
         leaderModal.classList.add("active");
 
