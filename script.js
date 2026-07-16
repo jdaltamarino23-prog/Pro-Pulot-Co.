@@ -224,13 +224,13 @@ const leaderOrder = [
 
 const specialOrder = [
 
-    "member1",
+    "Pao",
 
-    "member2",
+    "Sharon",
 
-    "member3",
+    "Randy",
 
-    "member4"
+    "Roswel"
 
 ];
 
