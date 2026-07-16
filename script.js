@@ -520,6 +520,37 @@ function loadLeader(id){
    }
 }
 
+function loadSpecialMember(id){
+
+    const member = specialMembers[id];
+
+    document.getElementById("leader-photo").src = member.image;
+
+    document.getElementById("leader-name").textContent = member.name;
+
+    document.getElementById("leader-position").textContent = member.title;
+
+    document.getElementById("leader-tenure").textContent = member.tenure;
+
+    document.getElementById("leader-bio").textContent = member.bio;
+
+    const responsibilityList =
+        document.getElementById("leader-responsibilities");
+
+    responsibilityList.innerHTML = "";
+
+    member.responsibilities.forEach(item=>{
+
+        const li = document.createElement("li");
+
+        li.textContent = item;
+
+        responsibilityList.appendChild(li);
+
+    });
+
+}
+
 document.querySelectorAll(".leader-btn").forEach(button=>{
 
     button.addEventListener("click",function(e){
