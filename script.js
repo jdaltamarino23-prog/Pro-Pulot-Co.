@@ -427,7 +427,7 @@ const leaders = {
 
 const specialMembers = {
 
-    member1:{
+    Pao:{
         name:"Pao Nemil",
         title:"Featured Special Member",
         image:"images/feature/member1.jpg",
@@ -442,7 +442,7 @@ const specialMembers = {
             ]
     },
 
-    member2:{
+    Sharon:{
         name:"Sharon Ano-os",
         title:"Featured Special Member",
         image:"images/feature/member2.jpg",
@@ -458,7 +458,7 @@ const specialMembers = {
         
     },
 
-    member3:{
+    Randy:{
         name:"Randy Cipriano",
         title:"Featured Special Member",
         image:"images/feature/member3.jpg",
@@ -474,7 +474,7 @@ const specialMembers = {
         
     },
 
-    member4:{
+    Roswel:{
         name:"Roswel Dayanan",
         title:"Featured Special Member",
         image:"images/feature/member4.jpg",
