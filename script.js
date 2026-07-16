@@ -194,6 +194,8 @@ window.addEventListener("scroll", () => {
 ========================== */
 let currentLeader = "";
 
+let currentProfileType = "leader";
+
 const leaderOrder = [
 
     "leigh",
