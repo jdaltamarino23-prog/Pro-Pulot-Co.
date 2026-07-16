@@ -223,11 +223,21 @@ const leaderOrder = [
 const leaders = {
 
     leigh:{
-        name:"Leigh Pacilan",
-        position:"CAPTAIN",
-        image:"images/officers/Leigh.jpg",
-        bio:"Provides strategic leadership, oversees club operations, and promotes the vision and values of Pro Pulot Co."
-    },
+    name:"Leigh Pacilan",
+    position:"Captain",
+    image:"images/officers/Leigh.jpg",
+
+    tenure:"Founding Member • Since 2026",
+
+    bio:"Serves as Captain of Pro Pulot Co., providing strategic leadership while promoting sportsmanship, teamwork, and organizational excellence throughout the community.",
+
+    responsibilities:[
+        "Provide strategic leadership",
+        "Oversee club operations",
+        "Guide organizational planning",
+        "Represent Pro Pulot Co."
+    ]
+},
 
     irik:{
         name:"Irik Patria",
@@ -312,7 +322,23 @@ function loadLeader(id){
     document.getElementById("leader-photo").src = leader.image;
     document.getElementById("leader-name").textContent = leader.name;
     document.getElementById("leader-position").textContent = leader.position;
+
+    document.getElementById("leader-tenure").textContent = leader.tenure;
     document.getElementById("leader-bio").textContent = leader.bio;
+
+    const responsibilityList = document.getElementById("leader-responsibilities");
+
+    responsibilityList.innerHTML = "";
+
+    leader.responsibilities.forEach(item => {
+
+        const li = document.createElement("li");
+
+        li.textContent = item;
+
+        responsibilityList.appendChild(li);
+
+    });
 
 }
 
