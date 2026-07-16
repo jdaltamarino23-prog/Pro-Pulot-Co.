@@ -292,7 +292,7 @@ const leaders = {
 
   aziel:{
     name:"Aziel JD Altamarino",
-    position:"Systems & Software Engineer",
+    position:"Software & Social Media Engineer",
     image:"images/officers/aziel.jpg",
 
     tenure:"Founding Member • Since 2026",
