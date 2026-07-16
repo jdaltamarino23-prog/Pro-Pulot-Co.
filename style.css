@@ -797,6 +797,51 @@ nav ul{
    LEADERSHIP PROFILE MODAL
 ========================== */
 
+.leader-modal{
+
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.82);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+    padding:30px;
+
+}
+
+.leader-modal.active{
+
+    display:flex;
+
+}
+
+.leader-modal-content{
+
+    background:#fff;
+    width:90%;
+    max-width:900px;
+
+    border-radius:22px;
+
+    padding:40px;
+
+    display:flex;
+
+    gap:40px;
+
+    align-items:flex-start;
+
+    position:relative;
+
+    animation:leaderPopup .35s ease;
+
+}
+
 /* ==========================
    LEADER MODAL LAYOUT
 ========================== */
