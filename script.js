@@ -222,6 +222,18 @@ const leaderOrder = [
 
 ];
 
+const specialOrder = [
+
+    "member1",
+
+    "member2",
+
+    "member3",
+
+    "member4"
+
+];
+
 const leaders = {
 
     leigh:{
