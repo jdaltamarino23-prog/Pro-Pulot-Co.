@@ -419,6 +419,8 @@ function loadLeader(id){
 
     const leader = leaders[id];
 
+    console.log("Position:", leader.position);
+
     document.getElementById("leader-photo").src = leader.image;
     document.getElementById("leader-name").textContent = leader.name;
     document.getElementById("leader-position").textContent = leader.position;
