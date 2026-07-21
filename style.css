@@ -1168,7 +1168,7 @@ nav ul{
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
 }
-.member-card {
+.directory-card {
     background: #1f1f1f;
     border: 2px solid #d4af37;
     border-radius: 20px;
@@ -1177,12 +1177,12 @@ nav ul{
     transition: 0.3s ease;
 }
 
-.member-card:hover {
+.directory-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 25px rgba(0,0,0,.18);
 }
 
-.member-card img {
+.directory-card img {
     width: 140px;
     height: 140px;
     object-fit: cover;
@@ -1191,7 +1191,7 @@ nav ul{
     margin-bottom: 18px;
 }
 
-.member-card h3 {
+.directory-card h3 {
     color: #fff;
     margin-bottom: 8px;
 }
